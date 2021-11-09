@@ -39,8 +39,8 @@ namespace TrabajoPractico5
                 comando.Parameters.Add(editorial);
                 comando.Parameters.Add(ciudad);
                 comando.Parameters.Add(pais);
-                //comando.Parameters.Add(fecha);
-
+                comando.Parameters.Add(fecha);
+                
                 comando.ExecuteNonQuery();
             }
             catch (Exception)
@@ -93,11 +93,11 @@ namespace TrabajoPractico5
                         Editorial = reader["Editorial"].ToString(),
                         Ciudad = reader["Ciudad"].ToString(),
                         Pais = reader["Pais"].ToString(),
-                        FechaEdicion = reader["Fecha"].ToString(),
+                        FechaEdicion = reader["FechaEdicion"].ToString(),
                     });
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw;
             }

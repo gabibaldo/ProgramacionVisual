@@ -35,18 +35,19 @@ namespace TrabajoPractico5
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.Paginas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paginas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.FechaEdicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,10 +66,11 @@ namespace TrabajoPractico5
             this.editorialDataGridViewTextBoxColumn,
             this.ciudadDataGridViewTextBoxColumn,
             this.paisDataGridViewTextBoxColumn,
+            this.FechaEdicion,
             this.Editar,
             this.Eliminar});
             this.GridLibros.DataSource = this.libroBindingSource;
-            this.GridLibros.Location = new System.Drawing.Point(14, 200);
+            this.GridLibros.Location = new System.Drawing.Point(3, 202);
             this.GridLibros.Name = "GridLibros";
             this.GridLibros.RowHeadersWidth = 51;
             this.GridLibros.RowTemplate.Height = 24;
@@ -115,27 +117,9 @@ namespace TrabajoPractico5
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Paginas
+            // libroBindingSource
             // 
-            this.Paginas.DataPropertyName = "Paginas";
-            this.Paginas.HeaderText = "Paginas";
-            this.Paginas.MinimumWidth = 6;
-            this.Paginas.Name = "Paginas";
-            this.Paginas.Width = 125;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.Text = "Editar";
-            this.Editar.UseColumnTextForLinkValue = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseColumnTextForLinkValue = true;
+            this.libroBindingSource.DataSource = typeof(TrabajoPractico5.Libro);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -169,6 +153,14 @@ namespace TrabajoPractico5
             this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
             this.iSBNDataGridViewTextBoxColumn.Width = 125;
             // 
+            // Paginas
+            // 
+            this.Paginas.DataPropertyName = "Paginas";
+            this.Paginas.HeaderText = "Paginas";
+            this.Paginas.MinimumWidth = 6;
+            this.Paginas.Name = "Paginas";
+            this.Paginas.Width = 125;
+            // 
             // edicionDataGridViewTextBoxColumn
             // 
             this.edicionDataGridViewTextBoxColumn.DataPropertyName = "Edicion";
@@ -201,9 +193,27 @@ namespace TrabajoPractico5
             this.paisDataGridViewTextBoxColumn.Name = "paisDataGridViewTextBoxColumn";
             this.paisDataGridViewTextBoxColumn.Width = 125;
             // 
-            // libroBindingSource
+            // FechaEdicion
             // 
-            this.libroBindingSource.DataSource = typeof(TrabajoPractico5.Libro);
+            this.FechaEdicion.DataPropertyName = "FechaEdicion";
+            this.FechaEdicion.HeaderText = "FechaEdicion";
+            this.FechaEdicion.MinimumWidth = 6;
+            this.FechaEdicion.Name = "FechaEdicion";
+            this.FechaEdicion.Width = 125;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.Text = "Editar";
+            this.Editar.UseColumnTextForLinkValue = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForLinkValue = true;
             // 
             // Form1
             // 
@@ -241,6 +251,7 @@ namespace TrabajoPractico5
         private System.Windows.Forms.DataGridViewTextBoxColumn editorialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEdicion;
         private System.Windows.Forms.DataGridViewLinkColumn Editar;
         private System.Windows.Forms.DataGridViewLinkColumn Eliminar;
     }
